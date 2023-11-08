@@ -1,0 +1,119 @@
+body{
+    background-color: #d8c1a5;
+
+}
+
+
+.head{
+    display: flex;
+    justify-content: center;
+}
+.headimg{
+    width: 95%;
+    height: auto;
+    overflow: clip;
+    filter: brightness(100%);
+    transition: 1s;
+    border-radius: 5%;
+}
+
+.headimg:hover{
+    transition: 2s;
+    filter: brightness(110%);
+    border-radius: 7vw;
+}
+
+.elements{
+
+    display: flex;
+    flex-direction: row;
+    min-width: 850px;
+}
+.phal{
+    display: flex;
+    justify-content: center;
+    font-family:'Solitreo', cursive;
+    font-size:7vw;
+    margin-top: 30px;
+    overflow:clip;
+    width: auto;
+    
+}
+
+@font-face {
+    font-family: Freestyle Script;
+    src: url('https://fonts.google.com/specimen/Solitreo?preview.text=Freestyle%20Script&preview.text_type=custom');
+}
+
+.mainphoto{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20%;
+    transition: all 0.5s;
+}
+.mainel {
+ margin: 70px;
+ width: 40%;
+ transition:  0.5s;
+ overflow: clip;
+ display: flex;
+}
+
+
+@media (max-width:850px) {
+    .elements{
+        flex-direction: column;
+
+        
+    }
+    .mainel{
+        margin-left:15vw ;
+        display: flex;
+        margin-left: auto 0;
+    }
+}
+
+@media (max-width:1080px) {
+    .elements{
+        flex-direction: column;
+align-items: center;
+        
+    }
+    .mainel{
+width: 60%;
+        display: flex; 
+        margin-left: auto 0;
+    }
+}
+
+.title{
+    position: fixed;
+    opacity: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 2vw;
+    color: white;
+    width: 100%;
+    top: 37%;
+    
+    text-align: center;
+    transition: all 0.5s;
+}
+.mainel:hover {
+    filter: brightness(100%);
+    transition: all 0.5s;
+}
+
+.mainel:hover .mainphoto{
+    background: rgba(0, 0, 0, 0.7);
+    filter: brightness(30%);
+    transition:  0.5s;
+}
+.mainel:hover .title{
+   opacity: 1;
+   color: white;
+   filter: brightness(100%);
+   transform: translate3d(0%,-30%,100px);
+}

@@ -1,0 +1,96 @@
+
+
+.gallery {
+	display: flex;
+	padding: 2px;
+	transition: .3s;
+width: 99%;
+
+
+}	
+
+.arrow{
+	display: block;
+	transition: 1s;
+}
+
+
+
+.arrow:hover{
+	filter: brightness(70%);
+	transition: 1s;
+}
+
+@font-face {
+    font-family: Freestyle Script;
+    src: url('https://fonts.google.com/specimen/Solitreo?preview.text=Freestyle%20Script&preview.text_type=custom');
+}
+	
+	
+	.gallery__link {
+		margin: 2px;
+		overflow: hidden;
+	}	
+		
+	.gallery__thumb:hover .gallery__caption
+	        {
+				opacity: 1;
+			}
+	.gallery__thumb:hover .btn{
+		opacity: 0.8;
+	}
+		
+	
+	
+	.gallery__thumb {
+		position: relative;
+		margin: 10px;
+		opacity: 0;
+	}
+	
+	.gallery__image {
+		display: block;
+		width: 100%;
+		transition: 0.3s;
+		filter: grayscale(0);
+
+		
+	}
+
+	.gallery__thumb:hover .gallery__image{
+			transform: scale(1.1);
+			filter: grayscale(0);
+			
+	}
+
+	
+	
+	.gallery__caption {
+		position: absolute;
+		display: flex;
+		bottom: -15;
+		left: -15;
+		padding: 1vw 1vw 1vw;
+		width: 100%;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1vw;
+		color: white;
+		opacity: 0;
+		background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255 ,255 , 0) 100%);
+		transition: .3s;
+	}
+
+	.gallery__thumb.animation{
+      opacity: 1;
+      transition: all 1.5s;
+	  
+	}
+
+
+
+@media screen and (max-width:320px) {
+	.gallery{
+		flex-direction:column;
+		align-items: center;
+	}
+}

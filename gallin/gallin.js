@@ -1,0 +1,1 @@
+function onEntry(entry) { entry.forEach(change => { if (change.isIntersecting) { change.target.classList.add('animation'); } }); } let options = { threshold: [0.5] }; let observer = new IntersectionObserver(onEntry, options); let elements = document.querySelectorAll('.gallery__thumb'); for (let elm of elementsаf) { observer.observe(elm); }
